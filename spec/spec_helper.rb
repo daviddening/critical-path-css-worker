@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "critical/path/css/worker"
+require "critical_path_css_worker"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
