@@ -22,7 +22,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+This gem depends on the loadcss-rails gem.  Per their instructions.
+
+The loadCSS and onloadCSS files will be added to the asset pipeline and available for you to use. Add the lines that you need to your application's JS manifest (usually app/assets/javascripts/application.js).
+
+```
+//= require loadCSS
+//= require cssrelpreload
+//= require onloadCSS
+```
 
 ## Development
 

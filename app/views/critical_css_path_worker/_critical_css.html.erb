@@ -1,0 +1,10 @@
+<style>
+  <%= raw critical_css(path) %>
+</style>
+<script>
+    loadCSS("<%= stylesheet_path(application) %>");
+</script>
+<link rel="preload" href="<%= stylesheet_path(application) %>" as="style" onload="this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="<%= stylesheet_path(application) %>">
+</noscript>
