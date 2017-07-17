@@ -1,7 +1,16 @@
 require "bundler/setup"
 require "critical_path_css_worker"
+
+require 'active_support/time'
+require "active_support/cache"
 # require "critical-path-css-rails"
 # require "critical_path_css_worker/cache_critical_css_worker"
+
+module Rails
+  def self.cache
+    @cache ||= ActiveSupport::Cache::MemoryStore.new
+  end
+end
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -14,5 +23,9 @@ RSpec.configure do |config|
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
+  end
+
+  config.before(:each) do
+    Rails.cache.clear
   end
 end

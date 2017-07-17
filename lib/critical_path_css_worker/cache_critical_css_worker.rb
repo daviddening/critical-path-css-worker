@@ -12,6 +12,7 @@ module CriticalPathCssWorker
 
     def self.cache_critical_css(url, critical_css_present)
       path = URI(url).path
+
       return if critical_css_present && CriticalCssCacheHelper.fresh?(path)
       return if CriticalCssCacheHelper.processing?(path)
 

@@ -1,5 +1,6 @@
 require "sidekiq"
 require "critical-path-css-rails"
+# require "rails"
 
 require "critical_path_css_worker/version"
 require "critical_path_css_worker/helper"
