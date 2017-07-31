@@ -32,6 +32,17 @@ The loadCSS and onloadCSS files will be added to the asset pipeline and availabl
 //= require onloadCSS
 ```
 
+Setup critical_path_css.yml per the critical_path_css README
+
+[https://github.com/mudbugmedia/critical-path-css-rails]
+
+### Before deployment
+
+Make sure analytics ignore the Penthouse headless browser used to generate the css
+
+'Penthouse Critical Path CSS Generator'
+
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

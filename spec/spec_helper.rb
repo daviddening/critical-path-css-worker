@@ -1,10 +1,7 @@
 require "bundler/setup"
 require "critical_path_css_worker"
 
-require 'active_support/time'
 require "active_support/cache"
-# require "critical-path-css-rails"
-# require "critical_path_css_worker/cache_critical_css_worker"
 
 module Rails
   def self.cache
