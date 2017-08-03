@@ -3,17 +3,20 @@ require "critical-path-css-rails"
 # require "rails"
 
 require "critical_path_css_worker/version"
-require "critical_path_css_worker/helper"
+require "critical_path_css_worker/engine"
 require "critical_path_css_worker/cache_critical_css_worker"
 require "critical_path_css_worker/critical_css_cache_helper"
 
 module CriticalPathCssWorker
+  # require_dependency("critical_path_css_worker/cache_critical_css_worker")
+
   def critical_css(url)
     path = URI(url).path
     css = CriticalPathCss.fetch(path)
     CacheCriticalCssWorker.cache_critical_css(url, !css.empty?)
     css
   end
+  module_function :critical_css
 end
 
 # Override Critical Path Css 
