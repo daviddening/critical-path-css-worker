@@ -1,6 +1,7 @@
 require "bundler/setup"
 require "critical_path_css_worker"
 
+require 'active_support'
 require "active_support/cache"
 
 module Rails

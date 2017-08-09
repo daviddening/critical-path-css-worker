@@ -4,3 +4,4 @@ source "https://rubygems.org"
 gemspec
 
 gem 'pry-byebug', '3.4.0'
+gem 'rails'
