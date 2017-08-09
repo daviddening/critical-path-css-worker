@@ -1,3 +1,6 @@
+require 'sidekiq'
+require "critical-path-css-rails"
+
 module CriticalPathCssWorker
   class CacheCriticalCssWorker
     include Sidekiq::Worker
