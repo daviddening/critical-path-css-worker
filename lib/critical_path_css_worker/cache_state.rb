@@ -1,5 +1,5 @@
 module CriticalPathCssWorker
-  class CriticalCssCacheHelper
+  class CacheState
     CRITICAL_CSS_CACHE_HELPER_NAMESPACE = "critical-path-css-processing".freeze
     PROCESSING = "processing".freeze
     FRESH = "fresh".freeze

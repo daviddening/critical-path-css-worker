@@ -10,7 +10,7 @@ RSpec.describe CriticalPathCssWorker do
 
     it "calls through to cache worker" do
       expect(CriticalPathCss).to receive(:fetch) {"some css"}
-      expect(CriticalPathCssWorker::CacheCriticalCssWorker).to receive(:cache_critical_css).with(url, true)
+      expect(CriticalPathCssWorker::Worker).to receive(:cache_critical_css).with(url, true)
 
       expect(CriticalPathCssWorker::critical_css(url)).to eq "some css"
     end

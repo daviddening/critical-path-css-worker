@@ -24,7 +24,7 @@ Or install it yourself as:
 Add to your application.rb
 
 ```ruby
-require 'critical_path_css_worker/cache_critical_css_worker'
+require 'critical_path_css_worker/worker'
 ```
 To test your app on development ensure that you run 
 `rake assets:precompile`
